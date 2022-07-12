@@ -1,5 +1,9 @@
 #Makefile
 
+lint:
+	poetry run flake8 brain_games
+
+
 bra:
 	poetry run brain-games
 
