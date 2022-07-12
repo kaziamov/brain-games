@@ -13,7 +13,7 @@ def the_game():
     """Script of game"""
     score = 0
     number_of_questions = 3
-    list_of_challenges = [is_even_number_question, is_calc_correct]
+    list_of_challenges = [is_even_number_question, is_calc_correct, is_greatest_divisor]
     user_name = greet()
 
     game_is_on = True
@@ -27,7 +27,7 @@ def the_game():
                     print(f"{user_name}'s score is {score}")
 
     print(f'Game Over. Your final score is {score}. Try again.')
-    
+
 
 def greet():
     """Ask user name and say hi"""
@@ -55,6 +55,20 @@ def is_calc_correct():
     math_question = f'{first_num} {random_action} {second_num}'
     print(f'What is {math_question}?')
     correct_answer = eval(math_question)
+    checked_answer = check_answer(correct_answer, ask_user('integer'))
+    return checked_answer
+
+
+def is_greatest_divisor():
+    """Generate two number for Find the greatest common divisor of given numbers."""
+    first_num = random.randint(1, 50)
+    second_num = random.randint(1, 50)
+    print(f'Find the greatest common divisor of numbers {first_num} and {second_num}: ')
+    first_num_gsd = [num for num in range(1, first_num) if first_num % num == 0]
+    second_num_gsd = [num for num in range(1, second_num) if second_num % num == 0]
+    compare_gsd = [num for num in first_num_gsd if num in second_num_gsd]
+    correct_answer = max(compare_gsd)
+    # print('Debug: correct answer - ', correct_answer)
     checked_answer = check_answer(correct_answer, ask_user('integer'))
     return checked_answer
 

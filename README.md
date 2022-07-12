@@ -4,3 +4,4 @@
 
 Запись 'step 5' https://asciinema.org/connect/34ed8ebc-e199-4338-aa57-88da8c641ab0
 Запись 'step 6' https://asciinema.org/a/vSVX5Ge0RgqumsGvfmyn6DkfT
+Запись 'step 7' https://asciinema.org/a/xm2azjxGS6bPNjWkGrqxNfnyJ
