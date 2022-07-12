@@ -13,7 +13,7 @@ def the_game():
     """Script of game"""
     score = 0
     number_of_questions = 3
-    list_of_challenges = [is_even_number_question, is_calc_correct, is_greatest_divisor]
+    list_of_challenges = [is_even_number_question, is_calc_correct, is_greatest_divisor, is_missing_number]
     user_name = greet()
 
     game_is_on = True
@@ -41,8 +41,8 @@ def is_even_number_question():
     random_number = random.randint(1, 50)
     correct_answer = random_number % 2 == 0
     print(f'{random_number} is even number? (Yes or No)')
-    # print('Debug: correct answer - ', correct_answer)
     checked_answer = check_answer(correct_answer, ask_user('string'))
+    print('Correct answer - ', correct_answer)
     return checked_answer
 
 
@@ -56,6 +56,7 @@ def is_calc_correct():
     print(f'What is {math_question}?')
     correct_answer = eval(math_question)
     checked_answer = check_answer(correct_answer, ask_user('integer'))
+    print('Correct answer - ', correct_answer)
     return checked_answer
 
 
@@ -68,8 +69,21 @@ def is_greatest_divisor():
     second_num_gsd = [num for num in range(1, second_num) if second_num % num == 0]
     compare_gsd = [num for num in first_num_gsd if num in second_num_gsd]
     correct_answer = max(compare_gsd)
-    # print('Debug: correct answer - ', correct_answer)
     checked_answer = check_answer(correct_answer, ask_user('integer'))
+    print('Correct answer - ', correct_answer)
+    return checked_answer
+
+def is_missing_number():
+    """Generate missing in the progression"""
+    first_num = random.randint(3, 7)
+    num_list = [str(num + first_num) for num in range(7)]
+    correct_answer = random.choice(num_list)
+    num_index = num_list.index(correct_answer)
+    num_list[num_index] = '. .'
+    secret_list = ' '.join(num_list)
+    print(f'What number is missing in the progression?\n{secret_list}')
+    checked_answer = check_answer(correct_answer, str(ask_user('integer')))
+    print('Correct answer - ', correct_answer)
     return checked_answer
 
 
@@ -87,12 +101,12 @@ def ask_user(type_of_answer):
 def check_answer(correct_answer, user_answer):
     """Return True if correct answer and user answer same"""
     will_it_be_continue = correct_answer == user_answer
-    # print(f'Debug: user answer {user_answer}, correct answer {correct_answer}')
+    print(f'Debug: user answer {user_answer}, correct answer {correct_answer}')
     if will_it_be_continue:
-        print('Correct answer!')
+        print('You right!')
 
     else:
-        print('Uncorrect answer.')
+        print('You are mistake.')
     return will_it_be_continue
 
 
