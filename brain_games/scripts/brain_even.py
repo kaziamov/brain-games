@@ -13,7 +13,7 @@ def the_game():
     """Script of game"""
     score = 0
     number_of_questions = 3
-    list_of_challenges = [is_even_number_question, is_calc_correct, is_greatest_divisor, is_missing_number]
+    list_of_challenges = [is_even_number_question, is_calc_correct, is_greatest_divisor, is_missing_number, is_prime_number]
     user_name = greet()
 
     game_is_on = True
@@ -75,7 +75,7 @@ def is_greatest_divisor():
 
 def is_missing_number():
     """Generate missing in the progression"""
-    first_num = random.randint(3, 7)
+    first_num = random.randint(3, 9)
     num_list = [str(num + first_num) for num in range(7)]
     correct_answer = random.choice(num_list)
     num_index = num_list.index(correct_answer)
@@ -83,6 +83,16 @@ def is_missing_number():
     secret_list = ' '.join(num_list)
     print(f'What number is missing in the progression?\n{secret_list}')
     checked_answer = check_answer(correct_answer, str(ask_user('integer')))
+    print('Correct answer - ', correct_answer)
+    return checked_answer
+
+
+def is_prime_number():
+    number = random.randint(1, 100)
+    check_list = [number % 2 != 0, number % 3 != 0, number % 5 != 0, number % 7 != 0]
+    correct_answer = all(check_list)
+    print(f'{number} is it a prime number? (Yes or No)')
+    checked_answer = check_answer(correct_answer, ask_user('string'))
     print('Correct answer - ', correct_answer)
     return checked_answer
 
@@ -101,12 +111,12 @@ def ask_user(type_of_answer):
 def check_answer(correct_answer, user_answer):
     """Return True if correct answer and user answer same"""
     will_it_be_continue = correct_answer == user_answer
-    print(f'Debug: user answer {user_answer}, correct answer {correct_answer}')
+    # print(f'Debug: user answer {user_answer}, correct answer {correct_answer}')
     if will_it_be_continue:
         print('You right!')
 
     else:
-        print('You are mistake.')
+        print('You are wrong.')
     return will_it_be_continue
 
 
