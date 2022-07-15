@@ -4,6 +4,7 @@ from brain_games.engine import check_answer, ask_user
 
 
 def main():
+    """Main function"""
     is_greatest_divisor()
 
 
