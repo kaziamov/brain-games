@@ -13,7 +13,8 @@ def the_game():
     """Script of game"""
     score = 0
     number_of_questions = 3
-    list_of_challenges = [is_even_number_question, is_calc_correct, is_greatest_divisor, is_missing_number, is_prime_number]
+    list_of_challenges = [is_even_number_question, is_calc_correct,
+                          is_greatest_divisor, is_missing_number, is_prime_number]
     user_name = greet()
 
     game_is_on = True
@@ -72,6 +73,7 @@ def is_greatest_divisor():
     checked_answer = check_answer(correct_answer, ask_user('integer'))
     print('Correct answer - ', correct_answer)
     return checked_answer
+
 
 def is_missing_number():
     """Generate missing in the progression"""
