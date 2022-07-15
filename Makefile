@@ -5,7 +5,7 @@ lint:
 
 
 bra:
-	poetry run brain-even
+	poetry run brain-games
 
 
 install:
