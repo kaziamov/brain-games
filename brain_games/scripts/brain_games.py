@@ -37,7 +37,6 @@ def the_game():
 def main():
     """User greet function"""
     print("Welcome to the Brain Games!\n")
-    the_game()
 
 
 if __name__ == '__main__':

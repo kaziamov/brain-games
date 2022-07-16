@@ -1,11 +1,16 @@
 import random
 
-from brain_games.engine import check_answer, ask_user
+from brain_games.engine import check_answer, ask_user, greet, NUMBER_OF_QUESTIONS
 
 
 def main():
     """Main function"""
-    is_prime_number()
+    greet()
+    answer = True
+    count_questions = 0
+    while answer and count_questions < NUMBER_OF_QUESTIONS + 1:
+        count_questions = + 1
+        answer = is_prime_number()
 
 
 def is_prime_number():

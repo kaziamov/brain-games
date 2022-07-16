@@ -1,14 +1,19 @@
 import random
 
-from brain_games.engine import check_answer, ask_user
+from brain_games.engine import check_answer, ask_user, greet, NUMBER_OF_QUESTIONS
 
 
 def main():
     """Main function"""
-    is_missing_number()
+    greet()
+    answer = True
+    count_questions = 0
+    while answer and count_questions < NUMBER_OF_QUESTIONS + 1:
+        count_questions = + 1
+        answer = is_missing_number(NUMBER_OF_QUESTIONS)
 
 
-def is_missing_number():
+def is_missing_number(repeats):
     """Generate missing in the progression"""
     first_num = random.randint(3, 9)
     num_list = [str(num + first_num) for num in range(7)]
