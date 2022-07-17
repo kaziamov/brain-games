@@ -2,7 +2,7 @@
 
 lint:
 	poetry run flake8 brain_games
-bra:
+brain-games:
 	poetry run brain-games
 install:
 	poetry install

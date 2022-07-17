@@ -11,6 +11,13 @@ def main():
     while answer and count_questions < NUMBER_OF_QUESTIONS + 1:
         count_questions = + 1
         answer = is_prime_number()
+    else:
+        if answer:
+            print('Congratulation {name}!')
+        elif count_questions <= 3:
+            print('Game over')
+        else:
+            print('You broke my heart and this game')
 
 
 def is_prime_number():
