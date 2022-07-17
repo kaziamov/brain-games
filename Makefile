@@ -2,23 +2,13 @@
 
 lint:
 	poetry run flake8 brain_games
-
-
 bra:
 	poetry run brain-games
-
-
 install:
 	poetry install
-
-
 build:
 	poetry build
-
-
 publish:
 	poetry publish --dry-run
-
-
 package-install:
-	python3 -m pip install --user dist/*.whl
+	python3 -m pip install --user dist/*.whl --force

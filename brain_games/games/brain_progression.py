@@ -25,3 +25,7 @@ def is_missing_number(repeats):
     checked_answer = check_answer(correct_answer, str(ask_user('integer')))
     print('Correct answer -', correct_answer)
     return checked_answer
+
+
+if __name__ == '__main__':
+    main()
