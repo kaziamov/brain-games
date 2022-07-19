@@ -19,7 +19,7 @@ def main():
     print('Game over {}. Your score is {}'.format(name, score))
 
 
-def is_missing_number(repeats):
+def is_missing_number():
     """Generate missing in the progression"""
     first_num = random.randint(3, 9)
     num_list = [str(num + first_num) for num in range(7)]

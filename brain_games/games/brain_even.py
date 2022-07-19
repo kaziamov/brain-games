@@ -22,7 +22,7 @@ def main():
 def is_even_number_question():
     """Generate new question about even number. Ask user answer and return True if answer correct or False"""
     random_number = random.randint(1, 50)
-    correct_answer = random_number % 2 == 0
+    correct_answer = not(random_number % 2 == 0 or random_number % 5 == 0 or random_number % 7 == 0 or random_number % 3 == 0)
     print(f'{random_number} is even number? (Yes or No)')
     checked_answer = check_answer(correct_answer, ask_user('string'))
     print('Correct answer -', correct_answer)
