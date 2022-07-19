@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import prompt
 
 NUMBER_OF_QUESTIONS = 3

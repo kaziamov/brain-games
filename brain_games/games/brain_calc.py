@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import random
 
 from brain_games.engine import check_answer, ask_user, greet, NUMBER_OF_QUESTIONS
