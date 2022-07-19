@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.2.0"
+description = "Brain Games. First Education Project for Hexlet Programming School"
+authors = ["Ilia Kaziamov <ilya.kazyamov@gmail.com>"]
+packages = [ { include = 'brain_games' }, ]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+prompt = "^0.4.1"
+
+[tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.16.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.games.brain_even:main"
+brain-calc = "brain_games.games.brain_calc:main"
+brain-gcd = "brain_games.games.brain_gcs:main"
+brain-prime = "brain_games.games.brain_prime:main"
+brain-progression = "brain_games.games.brain_progression:main"
