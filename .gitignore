@@ -1,6 +1,4 @@
 .venv
-poetry.lock
-pyproject.toml
 .idea
 /dist
 *cache*
