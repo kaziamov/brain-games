@@ -5,19 +5,16 @@ from brain_games.engine import check_answer, ask_user, greet, NUMBER_OF_QUESTION
 
 def main():
     """Main function"""
-    greet()
+    name = greet()
     answer = True
-    count_questions = 0
-    while answer and count_questions < NUMBER_OF_QUESTIONS + 1:
-        count_questions = + 1
-        answer = is_calc_correct()
-    else:
+    score = 0
+    for i in range(NUMBER_OF_QUESTIONS):
         if answer:
-            print('Congratulation {name}!')
-        elif count_questions <= 3:
-            print('Game over')
-        else:
-            print('You broke my heart and this game')
+            answer = is_calc_correct()
+            if answer:
+                score += 1
+
+    print('Game over {}. Your score is {}'.format(name, score))
 
 
 def is_calc_correct():
