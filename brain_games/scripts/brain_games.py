@@ -4,7 +4,7 @@
 
 def main():
     """User greet function"""
-    print("These Are Not the Droids You Are Looking For!\n")
+    print("Welcome to the Brain Games!")
 
 
 if __name__ == '__main__':
