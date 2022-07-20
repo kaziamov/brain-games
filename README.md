@@ -10,7 +10,7 @@ It is pack of five games for growup your math intellegence.
 
 # Installation
 
-Use pip for install.
+Use pip for install
 
 [Installation with poetry](https://asciinema.org/a/TrNaEMwNZxK3Per42OBnNrqHj)
 
