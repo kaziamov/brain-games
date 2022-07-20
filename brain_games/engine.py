@@ -5,6 +5,7 @@ import random
 
 from brain_games.cli import welcome_user
 
+
 def the_game(name_of_game, rules):
     """General game script"""
     name = welcome_user()
@@ -26,7 +27,8 @@ def the_game(name_of_game, rules):
                 print('Correct!')
                 score += 1
             else:
-                print(''''{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!'''.format(user_answer, correct_answer, name))
+                print(''''{}' is wrong answer ;(. Correct answer was '{}'.
+                Let's try again, {}!'''.format(user_answer, correct_answer, name))
                 game_is_on = False
 
     if game_is_on:
@@ -34,7 +36,8 @@ def the_game(name_of_game, rules):
 
 
 def is_even_number_question():
-    """Generate new question about even number. Ask user answer and return True if answer correct or False"""
+    """Generate new question about even number.
+    Ask user answer and return True if answer correct or False"""
     random_number = random.randint(1, 50)
     correct_answer = random_number % 2 == 0
     print("Question: {}".format(random_number))
@@ -54,7 +57,8 @@ def is_calc_correct():
 
 
 def is_greatest_divisor():
-    """Generate two number for Find the greatest common divisor of given numbers."""
+    """Generate two number for Find
+    the greatest common divisor of given numbers."""
     first_num = random.randint(3, 50)
     second_num = random.randint(2, 50)
     # first_num = 17
@@ -69,8 +73,10 @@ def is_greatest_divisor():
     lowest_number = list_of_numbers[0]
     # print(highest_number, lowest_number)
 
-    highest_number_gsd = [num for num in range(1, highest_number+1) if highest_number % num == 0]
-    lowest_number_gsd = [num for num in highest_number_gsd if lowest_number % num == 0]
+    highest_number_gsd = [num for num in range(1, highest_number + 1) \
+                          if highest_number % num == 0]
+    lowest_number_gsd = [num for num in highest_number_gsd \
+                         if lowest_number % num == 0]
     # print(highest_number_gsd, lowest_number_gsd)
 
     correct_answer = max(lowest_number_gsd)
@@ -99,7 +105,8 @@ def is_prime_number():
     if random_number in list_of_primes:
         return True
     else:
-        correct_answer = not(random_number % 2 == 0 or random_number % 5 == 0 or random_number % 7 == 0 or random_number % 3 == 0)
+        correct_answer = not(random_number % 2 == 0 or random_number % 5 == 0 or
+                             random_number % 7 == 0 or random_number % 3 == 0)
         return 'yes' if correct_answer else 'no'
 
 
