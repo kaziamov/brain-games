@@ -8,4 +8,4 @@ def welcome_user():
     """Ask user name and greet"""
     print('May I have your name? ', end='')
     name = prompt.string()
-    print(f'Nice to meet you {name}')
+    print(f'Hello, {name}')
