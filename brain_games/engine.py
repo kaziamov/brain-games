@@ -28,7 +28,7 @@ def the_game(name_of_game, rules):
                 score += 1
             else:
                 print(''''{}' is wrong answer ;(. Correct answer was '{}'.
-                Let's try again, {}!'''.format(user_answer, correct_answer, name))
+Let's try again, {}!'''.format(user_answer, correct_answer, name))
                 game_is_on = False
 
     if game_is_on:
