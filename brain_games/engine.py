@@ -105,9 +105,8 @@ def is_prime_number():
     if rm in list_of_primes:
         return True
     else:
-        correct_answer = not(
-            rm % 2 == 0 or rm % 5 == 0 or rm % 7 == 0 or rm % 3 == 0
-        )
+        cor = rm % 2 == 0 or rm % 5 == 0 or rm % 7 == 0 or rm % 3 == 0
+        correct_answer = not(cor)
         return 'yes' if correct_answer else 'no'
 
 
