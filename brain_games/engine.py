@@ -2,11 +2,12 @@
 
 import prompt
 
+
+
 NUMBER_OF_QUESTIONS = 3
 
 def greet():
     """Ask user name and say hi"""
-    print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
     print(f'Nice to meet you {name}')
     return name
