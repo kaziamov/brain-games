@@ -101,12 +101,13 @@ def is_missing_number():
 def is_prime_number():
     list_of_primes = [2, 3, 5, 7]
     random_number = random.randint(1, 50)
+    list_of_checkup = [random_number % 2 == 0,  random_number % 5 == 0,
+                       random_number % 7 == 0, random_number % 3 == 0]
     print("Question: {}".format(random_number))
     if random_number in list_of_primes:
         return True
     else:
-        correct_answer = not(random_number % 2 == 0 or random_number % 5 == 0 or
-                             random_number % 7 == 0 or random_number % 3 == 0)
+        correct_answer = not(any(list_of_checkup))
         return 'yes' if correct_answer else 'no'
 
 
