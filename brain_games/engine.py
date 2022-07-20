@@ -73,9 +73,9 @@ def is_greatest_divisor():
     lowest_number = list_of_numbers[0]
     # print(highest_number, lowest_number)
 
-    highest_number_gsd = [num for num in range(1, highest_number + 1) \
+    highest_number_gsd = [num for num in range(1, highest_number + 1)
                           if highest_number % num == 0]
-    lowest_number_gsd = [num for num in highest_number_gsd \
+    lowest_number_gsd = [num for num in highest_number_gsd
                          if lowest_number % num == 0]
     # print(highest_number_gsd, lowest_number_gsd)
 
@@ -105,7 +105,9 @@ def is_prime_number():
     if rm in list_of_primes:
         return True
     else:
-        correct_answer = not(rm % 2 == 0 or rm % 5 == 0 or rm % 7 == 0 or rm % 3 == 0)
+        correct_answer = not(
+                rm % 2 == 0 or rm % 5 == 0 or rm % 7 == 0 or rm % 3 == 0
+        )
         return 'yes' if correct_answer else 'no'
 
 
