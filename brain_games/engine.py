@@ -19,7 +19,7 @@ def the_game(name_of_game, rules):
         if game_is_on:
             correct_answer = game()
             if correct_answer == 'yes' or correct_answer == 'no':
-                user_answer = input('Your answer: ')
+                user_answer = prompt.string('Your answer: ')
             else:
                 user_answer = prompt.integer('Your answer: ')
 
