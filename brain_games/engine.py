@@ -19,7 +19,7 @@ def the_game(name_of_game, rules):
         if game_is_on:
             correct_answer = game()
             if correct_answer == 'yes' or correct_answer == 'no':
-                user_answer = prompt.string('Your answer: ')
+                user_answer = input('Your answer: ')
             else:
                 user_answer = prompt.integer('Your answer: ')
 
@@ -100,13 +100,12 @@ def is_missing_number():
 
 def is_prime_number():
     list_of_primes = [2, 3, 5, 7]
-    random_number = random.randint(1, 50)
-    list_of_checkup = [random_number % 2 == 0,  random_number % 5 == 0, random_number % 7 == 0, random_number % 3 == 0]
-    print("Question: {}".format(random_number))
-    if random_number in list_of_primes:
+    rm = random.randint(1, 50)
+    print("Question: {}".format(rm))
+    if rm in list_of_primes:
         return True
     else:
-        correct_answer = not( any(list_of_checkup) )
+        correct_answer = not(rm % 2 == 0 or rm % 5 == 0 or rm % 7 == 0 or rm % 3 == 0)
         return 'yes' if correct_answer else 'no'
 
 
