@@ -37,7 +37,7 @@ def is_even_number_question():
     """Generate new question about even number. Ask user answer and return True if answer correct or False"""
     random_number = random.randint(1, 50)
     correct_answer = random_number % 2 == 0
-    print("Question: ", random_number)
+    print("Question: {}".format(random_number))
     return 'yes' if correct_answer else 'no'
 
 
@@ -95,7 +95,7 @@ def is_missing_number():
 def is_prime_number():
     list_of_primes = [2, 3, 5, 7]
     random_number = random.randint(1, 50)
-    print("Question: ", random_number)
+    print("Question: {}".format(random_number))
     if random_number in list_of_primes:
         return True
     else:
