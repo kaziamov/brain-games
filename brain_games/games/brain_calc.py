@@ -4,6 +4,7 @@ import random
 
 RULES = 'What is the result of the expression?'
 
+
 def is_calc_correct():
     """Create randon +, _ or * with 2 numbers and check answer"""
     actions = ['+', '-', '*']
@@ -14,6 +15,7 @@ def is_calc_correct():
     print('Question: {}'.format(math_question))
     correct_answer = eval(math_question)
     return correct_answer
+
 
 if __name__ == '__main__':
     pass
