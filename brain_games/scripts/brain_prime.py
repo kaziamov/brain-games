@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+from brain_games.games.brain_prime import RULES
+from brain_games.engine import the_game
+
 
 def main():
     """Main function"""
