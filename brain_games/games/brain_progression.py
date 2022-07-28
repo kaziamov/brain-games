@@ -1,14 +1,23 @@
 #!/usr/bin/env python
 
-from brain_games.engine import the_game
+import random
 
 RULES = 'What number is missing in the progression?'
 
 
-def main():
-    """Main function"""
-    the_game('brain_progression', RULES)
+def is_missing_number():
+    """Generate missing in the progression"""
+    first_num = random.randint(3, 9)
+    num_list = [str(num + first_num) for num in range(7)]
+    correct_answer = (random.choice(num_list))
+    num_index = num_list.index(correct_answer)
+    num_list[num_index] = '..'
+    secret_list = ' '.join(num_list)
+    print(f'Question: {secret_list}')
+    # print(correct_answer, type(correct_answer))
+    correct_answer_int = int(correct_answer)
+    return correct_answer_int
 
 
 if __name__ == '__main__':
-    main()
+    pass

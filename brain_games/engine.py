@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 
 import prompt
-import random
 
 from brain_games.cli import welcome_user
+from brain_games.games.brain_even import is_even_number_question
+from brain_games.games.brain_progression import is_missing_number
+from brain_games.games.brain_calc import is_calc_correct
+from brain_games.games.brain_gcd import is_greatest_divisor
+from brain_games.games.brain_prime import is_prime_number
 
 
 def the_game(name_of_game, rules):
@@ -33,81 +37,6 @@ Let's try again, {}!'''.format(user_answer, correct_answer, name))
 
     if game_is_on:
         print('Congratulations, {}!'.format(name))
-
-
-def is_even_number_question():
-    """Generate new question about even number.
-    Ask user answer and return True if answer correct or False"""
-    random_number = random.randint(1, 50)
-    correct_answer = random_number % 2 == 0
-    print("Question: {}".format(random_number))
-    return 'yes' if correct_answer else 'no'
-
-
-def is_calc_correct():
-    """Create randon +, _ or * with 2 numbers and check answer"""
-    actions = ['+', '-', '*']
-    first_num = random.randint(1, 14)
-    second_num = random.randint(1, 14)
-    random_action = random.choice(actions)
-    math_question = f'{first_num} {random_action} {second_num}'
-    print('Question: {}'.format(math_question))
-    correct_answer = eval(math_question)
-    return correct_answer
-
-
-def is_greatest_divisor():
-    """Generate two number for Find
-    the greatest common divisor of given numbers."""
-    first_num = random.randint(3, 50)
-    second_num = random.randint(2, 50)
-    # first_num = 17
-    # second_num = 34
-
-    print('Question: {} {}'.format(first_num, second_num))
-
-    list_of_numbers = [second_num, first_num]
-    sorted(list_of_numbers)
-
-    highest_number = list_of_numbers[-1]
-    lowest_number = list_of_numbers[0]
-    # print(highest_number, lowest_number)
-
-    highest_number_gsd = [num for num in range(1, highest_number + 1)
-                          if highest_number % num == 0]
-    lowest_number_gsd = [num for num in highest_number_gsd
-                         if lowest_number % num == 0]
-    # print(highest_number_gsd, lowest_number_gsd)
-
-    correct_answer = max(lowest_number_gsd)
-
-    return correct_answer
-
-
-def is_missing_number():
-    """Generate missing in the progression"""
-    first_num = random.randint(3, 9)
-    num_list = [str(num + first_num) for num in range(7)]
-    correct_answer = (random.choice(num_list))
-    num_index = num_list.index(correct_answer)
-    num_list[num_index] = '..'
-    secret_list = ' '.join(num_list)
-    print(f'Question: {secret_list}')
-    # print(correct_answer, type(correct_answer))
-    correct_answer_int = int(correct_answer)
-    return correct_answer_int
-
-
-def is_prime_number():
-    list_of_primes = [2, 3, 5, 7]
-    rm = random.randint(1, 50)
-    print("Question: {}".format(rm))
-    if rm in list_of_primes:
-        return True
-    else:
-        cor = rm % 2 == 0 or rm % 5 == 0 or rm % 7 == 0 or rm % 3 == 0
-        correct_answer = not(cor)
-        return 'yes' if correct_answer else 'no'
 
 
 NUMBER_OF_QUESTIONS = 3

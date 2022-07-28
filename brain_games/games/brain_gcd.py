@@ -1,14 +1,37 @@
 #!/usr/bin/env python
 
-from brain_games.engine import the_game
+import random
 
 RULES = 'Find the greatest common divisor of given numbers.'
 
 
-def main():
-    """Main function"""
-    the_game('brain_gcd', RULES)
+def is_greatest_divisor():
+    """Generate two number for Find
+    the greatest common divisor of given numbers."""
+    first_num = random.randint(3, 50)
+    second_num = random.randint(2, 50)
+    # first_num = 17
+    # second_num = 34
+
+    print('Question: {} {}'.format(first_num, second_num))
+
+    list_of_numbers = [second_num, first_num]
+    sorted(list_of_numbers)
+
+    highest_number = list_of_numbers[-1]
+    lowest_number = list_of_numbers[0]
+    # print(highest_number, lowest_number)
+
+    highest_number_gsd = [num for num in range(1, highest_number + 1)
+                          if highest_number % num == 0]
+    lowest_number_gsd = [num for num in highest_number_gsd
+                         if lowest_number % num == 0]
+    # print(highest_number_gsd, lowest_number_gsd)
+
+    correct_answer = max(lowest_number_gsd)
+
+    return correct_answer
 
 
 if __name__ == '__main__':
-    main()
+    pass
