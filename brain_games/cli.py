@@ -1,7 +1,11 @@
-# cli.py
+#!/usr/bin/env python
 """Module for green user in start program"""
 
 import prompt
+
+
+def main():
+    pass
 
 
 def welcome_user():
@@ -11,3 +15,6 @@ def welcome_user():
     name = prompt.string()
     print('Hello, {}'.format(name))
     return name
+
+if __name__ == '__main__':
+    main()
