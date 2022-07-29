@@ -16,5 +16,6 @@ def welcome_user():
     print('Hello, {}'.format(name))
     return name
 
+
 if __name__ == '__main__':
     main()

@@ -52,11 +52,12 @@ def input_user_answer(correct_answer):
 
 def check_answer(correct_answer, user_answer):
     """Function check user answer and return True or False"""
+    message = "'{}' is wrong answer ;(. Correct answer was '{}'"
     if correct_answer == user_answer:
         print('Correct!')
         return True
     else:
-        print("""'{}' is wrong answer ;(. Correct answer was '{}'""".format(user_answer, correct_answer))
+        print(message.format(user_answer, correct_answer))
         return False
 
 
