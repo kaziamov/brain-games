@@ -1,9 +1,20 @@
 [tool.poetry]
-name = "hexlet-code"
+name = "hexlet-code-kazyamov"
 version = "0.3.0"
-description = "Brain Games. First Education Project for Hexlet Programming School"
-authors = ["Ilia Kaziamov <ilya.kazyamov@gmail.com>"]
+authors = [
+  { name="Ilia Kaziamov", email="ilya.kazyamov@gmail.com" },
+]
+
+description = "First Education Project for Hexlet Programming School"
+readme = "README.md"
+license = { file="LICENSE" }
+
 packages = [ { include = 'brain_games' }, ]
+
+[project.urls]
+"Homepage" = "https://github.com/kazyamov/python-project-lvl1"
+"Bug Tracker" = "https://github.com/kazyamov/python-project-lvl1/issues"
+"Website" = "https://linktr.ee/ilyakazyamov"
 
 [tool.poetry.dependencies]
 python = "^3.8"
