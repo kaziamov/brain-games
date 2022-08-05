@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
 import random
 
-RULES = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def is_missing_number():
@@ -17,7 +15,3 @@ def is_missing_number():
     # print(correct_answer, type(correct_answer))
     correct_answer_int = int(correct_answer)
     return correct_answer_int
-
-
-if __name__ == '__main__':
-    pass

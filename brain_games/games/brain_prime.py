@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
 import random
 
-RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime_number():
@@ -14,7 +12,3 @@ def is_prime_number():
             correct_answer = False
             break
     return 'yes' if correct_answer else 'no'
-
-
-if __name__ == '__main__':
-    pass

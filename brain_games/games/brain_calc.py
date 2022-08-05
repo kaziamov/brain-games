@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
 import random
 
-RULES = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 
 
 def is_calc_correct():
@@ -15,7 +13,3 @@ def is_calc_correct():
     print('Question: {}'.format(math_question))
     correct_answer = eval(math_question)
     return correct_answer
-
-
-if __name__ == '__main__':
-    pass

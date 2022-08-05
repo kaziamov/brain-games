@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
 import random
 
-RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even_number_question():
@@ -12,7 +10,3 @@ def is_even_number_question():
     correct_answer = random_number % 2 == 0
     print("Question: {}".format(random_number))
     return 'yes' if correct_answer else 'no'
-
-
-if __name__ == '__main__':
-    pass

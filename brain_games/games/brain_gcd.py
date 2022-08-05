@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
 import random
 
-RULES = 'Find the greatest common divisor of given numbers.'
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def is_greatest_divisor():
@@ -31,7 +29,3 @@ def is_greatest_divisor():
     correct_answer = max(lowest_number_gsd)
 
     return correct_answer
-
-
-if __name__ == '__main__':
-    pass
