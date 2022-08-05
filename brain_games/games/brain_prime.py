@@ -3,7 +3,7 @@ import random
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def is_prime_number():
+def get_question_and_answer():
     num = random.randint(2, 50)
     correct_answer = True
     print("Question: {}".format(num))

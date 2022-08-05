@@ -3,7 +3,7 @@ import random
 DESCRIPTION = 'What is the result of the expression?'
 
 
-def is_calc_correct():
+def get_question_and_answer():
     """Create randon +, _ or * with 2 numbers and check answer"""
     actions = ['+', '-', '*']
     first_num = random.randint(1, 14)

@@ -3,11 +3,11 @@
 import prompt
 
 from brain_games.cli import welcome_user
-from brain_games.games.brain_even import is_even_number_question
-from brain_games.games.brain_progression import is_missing_number
-from brain_games.games.brain_calc import is_calc_correct
-from brain_games.games.brain_gcd import is_greatest_divisor
-from brain_games.games.brain_prime import is_prime_number
+from brain_games.games.brain_even import get_question_and_answer
+from brain_games.games.brain_progression import get_question_and_answer
+from brain_games.games.brain_calc import get_question_and_answer
+from brain_games.games.brain_gcd import get_question_and_answer
+from brain_games.games.brain_prime import get_question_and_answer
 
 
 def the_game(name_of_game, rules):
@@ -64,9 +64,9 @@ def check_answer(correct_answer, user_answer):
 NUMBER_OF_QUESTIONS = 3
 
 dict_of_games = {
-    'brain_even': is_even_number_question,
-    'brain_calc': is_calc_correct,
-    'brain_gcd': is_greatest_divisor,
-    'brain_progression': is_missing_number,
-    'brain_prime': is_prime_number,
+    'brain_even': get_question_and_answer,
+    'brain_calc': get_question_and_answer,
+    'brain_gcd': get_question_and_answer,
+    'brain_progression': get_question_and_answer,
+    'brain_prime': get_question_and_answer,
 }

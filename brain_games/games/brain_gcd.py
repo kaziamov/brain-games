@@ -3,7 +3,7 @@ import random
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def is_greatest_divisor():
+def get_question_and_answer():
     """Generate two number for Find
     the greatest common divisor of given numbers."""
     first_num = random.randint(3, 50)
