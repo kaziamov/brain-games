@@ -4,6 +4,8 @@ import prompt
 
 from brain_games.cli import welcome_user
 
+NUMBER_OF_QUESTIONS = 3
+
 
 def the_game(game):
     """General game script"""
@@ -54,6 +56,3 @@ def check_answer(correct_answer, user_answer):
     else:
         print(message.format(user_answer, correct_answer))
         return False
-
-
-NUMBER_OF_QUESTIONS = 3
