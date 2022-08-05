@@ -1,14 +1,8 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.3.0"
-authors = [
-  { name="Ilia Kaziamov", email="ilya.kazyamov@gmail.com" },
-]
-
-description = "First Education Project for Hexlet Programming School"
-readme = "README.md"
-license = { file="LICENSE" }
-
+description = "Brain Games. First Education Project for Hexlet Programming School"
+authors = ["Ilia Kaziamov <ilya.kazyamov@gmail.com>"]
 packages = [ { include = 'brain_games' }, ]
 
 [project.urls]
