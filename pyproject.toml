@@ -5,11 +5,6 @@ description = "Brain Games. First Education Project for Hexlet Programming Schoo
 authors = ["Ilia Kaziamov <ilya.kazyamov@gmail.com>"]
 packages = [ { include = 'brain_games' }, ]
 
-[project.urls]
-"Homepage" = "https://github.com/kazyamov/python-project-lvl1"
-"Bug Tracker" = "https://github.com/kazyamov/python-project-lvl1/issues"
-"Website" = "https://linktr.ee/ilyakazyamov"
-
 [tool.poetry.dependencies]
 python = "^3.8"
 prompt = "^0.4.1"
