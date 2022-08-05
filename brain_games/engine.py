@@ -2,9 +2,16 @@
 
 import prompt
 
-from brain_games.cli import welcome_user
-
 NUMBER_OF_QUESTIONS = 3
+
+
+def welcome_user():
+    """Ask user name and greet"""
+    print("Welcome to the Brain Games!")
+    print('May I have your name? ', end='')
+    name = prompt.string()
+    print('Hello, {}'.format(name))
+    return name
 
 
 def the_game(game):
@@ -40,7 +47,7 @@ def player_win(name):
 def input_user_answer(correct_answer):
     """Function check and return True if user answer correct."""
     if correct_answer == 'yes' or correct_answer == 'no':
-        user_answer = input('Your answer: ')
+        user_answer = prompt.string('Your answer: ')
     else:
         user_answer = prompt.integer('Your answer: ')
 
