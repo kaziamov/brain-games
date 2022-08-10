@@ -4,20 +4,13 @@ import prompt
 
 NUMBER_OF_QUESTIONS = 3
 
+def the_game(game):
+    """General game script"""
 
-def welcome_user():
-    """Ask user name and greet"""
     print("Welcome to the Brain Games!")
     print('May I have your name? ', end='')
     name = prompt.string()
     print('Hello, {}'.format(name))
-    return name
-
-
-def the_game(game):
-    """General game script"""
-
-    name = welcome_user()
 
     game_is_on = True
     print(game.DESCRIPTION)
