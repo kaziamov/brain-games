@@ -4,38 +4,58 @@
 
 # Description
 
-My first project for programming course in [Hexlet.io](https://ru.hexlet.io/programs/python/projects/49)
+It's a pack of five games for growing up your math intelligence.
 
-It is pack of five games for growup your math intellegence.
+* **Even number** - it's a game where one needs to answer correctly is even a random number or not.
+* **Missing number** - it's a game where one needs to find a missing number in progression.
+* **Calculation** - it's a game where that needs calc for random math operation for two random numbers.
+* **GSD** - it's a game where one needs to find the Greatest Common Divisor for two random numbers.
+* **Prime Number** - it's a game where one needs to answer correctly whether is prime a random number or not.
+
+
+First project for programming course Python Developer in [Hexlet.io](https://ru.hexlet.io/programs/python/projects/49)
 
 # Installation
 
-Use pip for install
-
-[Installation with poetry](https://asciinema.org/a/TrNaEMwNZxK3Per42OBnNrqHj)
+[![asciicast](https://asciinema.org/a/l2RmehSi8mDiemPR6GDr873AP.svg)](https://asciinema.org/a/l2RmehSi8mDiemPR6GDr873AP)
 
 # Usage
-## Is even
-[![asciicast](https://asciinema.org/a/vSVX5Ge0RgqumsGvfmyn6DkfT.svg)](https://asciinema.org/a/vSVX5Ge0RgqumsGvfmyn6DkfT)
+## Even Number
+[![asciicast](https://asciinema.org/a/yDdSDEDH1LjY0kukYGfRslYSY.svg)](https://asciinema.org/a/yDdSDEDH1LjY0kukYGfRslYSY)
 
-
+Example of playing the game with a win and loose ends.
 
 
 ## Calculation
-[![asciicast](https://asciinema.org/a/xm2azjxGS6bPNjWkGrqxNfnyJ.svg)](https://asciinema.org/a/xm2azjxGS6bPNjWkGrqxNfnyJ)
+[![asciicast](https://asciinema.org/a/sxwnoomtWBKVHMQRFHc7McA3A.svg)](https://asciinema.org/a/sxwnoomtWBKVHMQRFHc7McA3A)
+
+Example of playing the game with a win and loose ends.
+
 
 ## Find GSD
+[![asciicast](https://asciinema.org/a/fYYHwBRsBQm3jS58bYDQcCIcT.svg)](https://asciinema.org/a/fYYHwBRsBQm3jS58bYDQcCIcT)
+
+Example of playing the game with a win and loose ends.
 
 
 ## Missing number
+[![asciicast](https://asciinema.org/a/QN1w2UpnQ6K2vPFkOaD80e4e7.svg)](https://asciinema.org/a/QN1w2UpnQ6K2vPFkOaD80e4e7)
 
-## Is prime
-[![asciicast](https://asciinema.org/a/OZzJfun5P0nm2gDRto4jHZHLL.svg)](https://asciinema.org/a/OZzJfun5P0nm2gDRto4jHZHLL)
+Example of playing the game with a win and loose ends.
+
+
+## Prime Number
+[![asciicast](https://asciinema.org/a/AQzwRBJwTyo7pvnZgnC4TtYNF.svg)](https://asciinema.org/a/AQzwRBJwTyo7pvnZgnC4TtYNF)
+
+Example of playing the game with a win and loose ends.
+
 
 # Contacts
 
-Twitter: [@kazyamov](https://twitter.com/kazyamov)
+**Twitter**: [@kazyamov](https://twitter.com/kazyamov)
 
-LinkedIn: [Ilia Kaziamov](https://www.linkedin.com/in/kaziamov/)
+**LinkedIn**: [Ilia Kaziamov](https://www.linkedin.com/in/kaziamov/)
 
-Telegram: [@kazyamov](https://t.me/kazyamov)
+**Telegram**: [@kazyamov](https://t.me/kazyamov)
+
+**Instagram**: [@kazyamov](https://instagram.com/kazyamov)
