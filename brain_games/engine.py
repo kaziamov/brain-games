@@ -18,7 +18,9 @@ def run_game(game):
 
     for i in range(NUMBER_OF_QUESTIONS):
         if game_is_on:
-            correct_answer = game.get_question_and_answer()
+            correct_answer, question_message = game.get_question_and_answer()
+
+            print('Question: {}'.format(question_message))
 
             if correct_answer == 'yes' or correct_answer == 'no':
                 user_answer = prompt.string('Your answer: ')
