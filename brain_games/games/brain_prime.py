@@ -8,7 +8,6 @@ def get_question_and_answer():
     correct_answer = is_prime(num)
     math_message = ("{}".format(num))
 
-
     return 'yes' if correct_answer else 'no', math_message
 
 
