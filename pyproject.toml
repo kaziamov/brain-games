@@ -2,8 +2,13 @@
 name = "hexlet-code"
 version = "0.3.0"
 description = "Brain Games. First Education Project for Hexlet Programming School"
+repository = "https://github.com/kazyamov/python-project-lvl1"
 authors = ["Ilia Kaziamov <ilya.kazyamov@gmail.com>"]
 packages = [ { include = 'brain_games' }, ]
+classifiers = [
+	"Environment :: Console",
+	"Programming Language :: Python"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
