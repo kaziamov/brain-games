@@ -15,7 +15,3 @@ def welcome_user():
     name = prompt.string()
     print('Hello, {}'.format(name))
     return name
-
-
-if __name__ == '__main__':
-    main()
