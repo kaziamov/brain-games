@@ -5,7 +5,7 @@ import prompt
 NUMBER_OF_QUESTIONS = 3
 
 
-def the_game(game):
+def run_game(game):
     """General game script"""
 
     print("Welcome to the Brain Games!")

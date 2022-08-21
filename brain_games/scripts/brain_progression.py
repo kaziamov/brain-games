@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 from brain_games.games import brain_progression
-from brain_games.engine import the_game
+from brain_games.engine import run_game
 
 
 def main():
     """Main function"""
-    the_game(brain_progression)
+    run_game(brain_progression)
 
 
 if __name__ == '__main__':

@@ -5,8 +5,9 @@ DESCRIPTION = 'What number is missing in the progression?'
 
 def get_question_and_answer():
     """Generate missing in the progression"""
-    first_num = random.randint(3, 9)
-    num_list = [str(num + first_num) for num in range(7)]
+    start_number = random.randint(3, 9)
+    length = 7
+    numbers_in_progression = [str(num + start_number) for num in range(7)]
     correct_answer = (random.choice(num_list))
     num_index = num_list.index(correct_answer)
     num_list[num_index] = '..'
