@@ -6,13 +6,13 @@ DESCRIPTION = 'What number is missing in the progression?'
 def get_question_and_answer():
     """Generate missing in the progression"""
     start_number = random.randint(3, 9)
+    step = random.randint(3, 9)
     length = 7
-    numbers_in_progression = [str(num + start_number) for num in range(length)]
-    correct_answer = (random.choice(numbers_in_progression))
-    num_index = numbers_in_progression.index(correct_answer)
-    numbers_in_progression[num_index] = '..'
-    secret_list = ' '.join(numbers_in_progression)
-    math_message = f'{secret_list}'
-    correct_answer_int = int(correct_answer)
 
-    return correct_answer_int, math_message
+    numbers = [num for num in range(start_number, (start_number + length * step), step)]
+    correct_answer = (random.choice(numbers))
+
+    progression = ' '.join([str(number) if number != correct_answer else '..' for number in numbers])
+    math_message = f'{progression}'
+
+    return correct_answer, math_message
