@@ -9,7 +9,8 @@ def get_question_and_answer():
     step = random.randint(3, 9)
     length = 7
 
-    numbers = [num for num in range(start_number, (start_number + length * step), step)]
+    numbers = [num for num
+               in range(start_number, (start_number + length * step), step)]
     correct_answer = (random.choice(numbers))
 
     progression = ' '.join([str(number) if number != correct_answer
