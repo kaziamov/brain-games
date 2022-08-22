@@ -11,30 +11,33 @@ def run_game(game):
 
     print("Welcome to the Brain Games!")
     print('May I have your name? ', end='')
-    name = prompt.string()
-    print('Hello, {}'.format(name))
 
+    name = prompt.string()
+
+    print('Hello, {}'.format(name))
     print(game.DESCRIPTION)
 
-    number_of_correct_answers = 0
+    msg_question = 'Question: {}'
+    msg_answer = 'Your answer: '
+    msg_correct = 'Correct!'
+    msg_win = 'Congratulations, {}!'
+    msg_wrong = """'{}' is wrong answer ;(. Correct answer was '{}'
+Let's try again, {}!"""
 
     for i in range(NUMBER_OF_QUESTIONS):
         correct_answer, question_message = game.get_question_and_answer()
 
-        print('Question: {}'.format(question_message))
+        print(msg_question.format(question_message))
 
-        if correct_answer == 'yes' or correct_answer == 'no':
-            user_answer = prompt.string('Your answer: ')
+        if type(correct_answer) is str:
+            user_answer = prompt.string(msg_answer)
         else:
-            user_answer = prompt.integer('Your answer: ')
+            user_answer = prompt.integer(msg_answer)
 
-        message = "'{}' is wrong answer ;(. Correct answer was '{}'"
         if correct_answer == user_answer:
-            print('Correct!')
-            number_of_correct_answers += 1
+            print(msg_correct)
         else:
-            print(message.format(user_answer, correct_answer))
-            print("""Let's try again, {}!""".format(name))
+            print(msg_wrong.format(user_answer, correct_answer, name))
             return
 
-    print('Congratulations, {}!'.format(name))
+    print(msg_win.format(name))
