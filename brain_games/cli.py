@@ -1,11 +1,6 @@
-#!/usr/bin/env python
 """Module for green user in start program"""
 
 import prompt
-
-
-def main():
-    pass
 
 
 def welcome_user():
