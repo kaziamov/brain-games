@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-# Import third-party modules
-import prompt
-
 QUESTIONS_COUNT = 3
 
 
@@ -12,26 +9,23 @@ def run_game(game):
     print("Welcome to the Brain Games!")
     print('May I have your name? ', end='')
 
-    name = prompt.string()
+    name = input()
 
-    print('Hello, {}'.format(name))
+    print(f'Hello, {name}')
     print(game.DESCRIPTION)
 
     for i in range(QUESTIONS_COUNT):
         correct_answer, question_message = game.get_question_and_answer()
 
-        print('Question: {}'.format(question_message))
+        print(f'Question: {question_message}')
 
-        if type(correct_answer) is str:
-            user_answer = prompt.string('Your answer: ')
-        else:
-            user_answer = prompt.integer('Your answer: ')
+        user_answer = input('Your answer: ')
 
-        if correct_answer == user_answer:
-            print('Correct!')
-        else:
-            print("""'{}' is wrong answer ;(. Correct answer was '{}'
-Let's try again, {}!""".format(user_answer, correct_answer, name))
+        if correct_answer != user_answer:
+            print(f"""'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
+Let's try again, {name}!""")
             return
 
-    print('Congratulations, {}!'.format(name))
+        print('Correct!')
+
+    print(f'Congratulations, {name}!')
