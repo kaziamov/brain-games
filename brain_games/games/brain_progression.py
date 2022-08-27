@@ -10,10 +10,11 @@ def get_question_and_answer():
     length = 7
 
     numbers = list(range(start_number, (start_number + length * step), step))
-    correct_answer = (random.choice(numbers))
+    progression = ' '.join(numbers)
 
-    progression = ' '.join([str(number) if number != correct_answer
-                            else '..' for number in numbers])
+    hidden_index = random.randrange(0, length)
+    correct_answer, progression[hidden_index] = progression[hidden_index], '..'
+
     math_message = f'{progression}'
 
-    return correct_answer, math_message
+    return str(correct_answer), math_message
