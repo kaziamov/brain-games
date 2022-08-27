@@ -8,7 +8,11 @@ DESCRIPTION = 'What is the result of the expression?'
 
 def get_question_and_answer():
     """Create randon +, _ or * with 2 numbers and check answer"""
-    actions = {'+': operator.add, '*': operator.mul, '-': operator.sub}
+    actions = {
+        '+': operator.add,
+        '*': operator.mul,
+        '-': operator.sub
+    }
     first_num = random.randint(1, 14)
     second_num = random.randint(1, 14)
     random_action = random.choice(list(actions))
