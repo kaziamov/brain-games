@@ -15,7 +15,10 @@ def get_question_and_answer():
 
 def is_prime(number):
     """Function check is prime number or not. And return True or False"""
-    for i in range(2, number):
-        if (number % i) == 0:
-            return False
-    return True
+    primes = [2, 3, 5, 7]
+    check_list = [number > 1,
+                  number % 2 != 0,
+                  number % 3 != 0,
+                  number % 5 != 0,
+                  number % 7 != 0]
+    return all(check_list) or number in primes
