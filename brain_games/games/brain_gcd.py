@@ -13,7 +13,7 @@ def get_question_and_answer():
 
     correct_answer = find_gcd(first_num, second_num)
 
-    return correct_answer, math_question
+    return str(correct_answer), math_question
 
 
 def find_gcd(num1, num2):
