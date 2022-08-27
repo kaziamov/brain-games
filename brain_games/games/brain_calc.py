@@ -15,4 +15,4 @@ def get_question_and_answer():
     math_question = f'{first_num} {random_action} {second_num}'
     correct_answer = actions[random_action](first_num, second_num)
 
-    return correct_answer, math_question
+    return str(correct_answer), math_question
