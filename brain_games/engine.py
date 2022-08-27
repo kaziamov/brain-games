@@ -3,7 +3,7 @@
 # Import third-party modules
 import prompt
 
-NUMBER_OF_QUESTIONS = 3
+QUESTIONS_COUNT = 3
 
 
 def run_game(game):
@@ -17,7 +17,7 @@ def run_game(game):
     print('Hello, {}'.format(name))
     print(game.DESCRIPTION)
 
-    for i in range(NUMBER_OF_QUESTIONS):
+    for i in range(QUESTIONS_COUNT):
         correct_answer, question_message = game.get_question_and_answer()
 
         print('Question: {}'.format(question_message))
