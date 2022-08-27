@@ -11,13 +11,7 @@ def get_question_and_answer():
 
     math_question = '{} {}'.format(first_num, second_num)
 
-    list_of_numbers = [second_num, first_num]
-    sorted(list_of_numbers)
-
-    highest_number = list_of_numbers[-1]
-    lowest_number = list_of_numbers[0]
-
-    correct_answer = find_gcd(lowest_number, highest_number)
+    correct_answer = find_gcd(first_num, second_num)
 
     return correct_answer, math_question
 
