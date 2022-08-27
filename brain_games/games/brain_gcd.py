@@ -4,8 +4,8 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def get_question_and_answer():
-    """Generate two number for Find
-    the greatest common divisor of given numbers."""
+    """Generate two numbers and find
+    the greatest common divisor."""
     first_num = random.randint(3, 50)
     second_num = random.randint(2, 50)
 
