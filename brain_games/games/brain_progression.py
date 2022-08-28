@@ -10,7 +10,7 @@ def get_question_and_answer():
     length = 7
 
     numbers = list(range(start_number, (start_number + length * step), step))
-    progression = ' '.join(numbers)
+    progression = ' '.join(map(str, numbers))
 
     hidden_index = random.randrange(0, length)
     correct_answer, progression[hidden_index] = progression[hidden_index], '..'
