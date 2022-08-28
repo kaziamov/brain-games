@@ -22,8 +22,8 @@ def run_game(game):
         user_answer = input('Your answer: ')
 
         if correct_answer != user_answer:
-            print(f"""'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'
-Let's try again, {name}!""")
+            print("""'{}' is wrong answer ;(. Correct answer was '{}'
+Let's try again, {}!""".format(user_answer, correct_answer, name))
             return
 
         print('Correct!')
