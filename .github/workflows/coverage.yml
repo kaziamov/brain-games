@@ -17,11 +17,13 @@ jobs:
       name: Coverage
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v2
-      - name: Hexlet project check
-        uses: hexlet/project-action@release
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
         with:
-          hexlet-id: ${{ secrets.HEXLET_ID }}
+          node-version: '12'
+      - run: npm install -g yarn
+      - run: yarn install
+      - run: yarn build
       - uses: paambaati/codeclimate-action@v2.2.4
         env:
           CC_TEST_REPORTER_ID: 39d2b4edf208ff09e5de96dd679b36390240d84b7f0f5aa0b8d2ce856670e98b
