@@ -27,4 +27,4 @@ package-install:
 docker-build: build
 	docker build -t kaziamov/brain-games .
 docker-run:
-	docker run -it --name "brain-games" kaziamov/brain-games:v1 /bin/sh
+	docker run -it kaziamov/brain-games:v1 /bin/sh
