@@ -1,0 +1,8 @@
+.venv
+.idea
+.vscode
+*cache*
+*.pyc
+.git
+.github
+.gitignore
